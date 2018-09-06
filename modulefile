@@ -1,0 +1,18 @@
+#%Module -*- tcl -*-
+##
+## modulefile
+##
+proc ModulesHelp { } {
+  puts stderr "\tAdds [module-info name] to your environment.\n"
+}
+
+module-whatis "adds [module-info name] to your environment variables"
+
+set-alias	   runAA    "singularity exec /rcc/stor1/containers/aa4stsaih.simg \$*"
+setenv	   	   AA	    "python2 /opt/programs/AmpliconArchitect-master/src/AmpliconArchitect.py"
+setenv	   	   AA_SRC   "/opt/programs/AmpliconArchitect-master/src"
+setenv		   SINGULARITYENV_TMPDIR \$TMPDIR
+
+if ![ is-loaded 'singularity' ] {
+  module load singularity
+}
