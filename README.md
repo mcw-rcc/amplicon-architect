@@ -66,7 +66,7 @@ runAA flask run --port=${port}
 $ qsub aa_web.pbs
 ```
 
-### Connect to Notebook
+### Connect to Web session
 1. Check output file (*jobname*.o*JOBNUM*) for details.
 
 Example output file: aa_web_test.o252668
